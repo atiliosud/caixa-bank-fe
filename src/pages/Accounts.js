@@ -7,7 +7,7 @@ import DeleteAccountDialog from '../components/DeleteAccountDialog';
 import AccountMenu from '../components/AccountMenu';
 import SnackbarNotification from '../components/SnackbarNotification';
 import { useStore } from '@nanostores/react';
-import { accountsStore } from '../contexts/GlobalState';
+import { accountsStore, addAccount, deleteAccount } from '../contexts/GlobalState';
 import '../styles/Buttons.css';
 
 const Accounts = () => {
@@ -78,16 +78,9 @@ const Accounts = () => {
                 onDeleteOpen={handleDeleteDialogOpen}
             />
             <AddAccountDialog
-                open={dialogOpen}
-                onClose={handleDialogClose}
-                onSubmit={handleAddAccount}
-                description={description}
-                setDescription={setDescription}
-                type={type}
-                setType={setType}
-                currency={currency}
-                setCurrency={setCurrency}
-                formErrors={formErrors}
+                open={open}
+                setOpen={setOpen}
+                onAddAccount={handleAddAccount}
             />
             <DeleteAccountDialog
                 open={deleteDialogOpen}

@@ -1,4 +1,3 @@
-// AccountMenu.js
 import React from 'react';
 import { Menu, MenuItem } from '@mui/material';
 

@@ -1,4 +1,3 @@
-// AccountCard.js
 import React from 'react';
 import {
     Card, CardContent, Typography, Box, IconButton

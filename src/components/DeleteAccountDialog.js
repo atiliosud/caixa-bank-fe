@@ -1,4 +1,3 @@
-// DeleteAccountDialog.js
 import React from 'react';
 import {
     Dialog, DialogTitle, DialogContent, DialogActions, Typography, Button
