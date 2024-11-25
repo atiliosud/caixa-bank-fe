@@ -40,7 +40,7 @@ const TransferForm = ({ onClose }) => {
             setToAccount('');
             setSnackbarMessage('Transfer successful');
             setSnackbarOpen(true);
-            if (onClose) onClose(); // Cerrar el diálogo
+            if (onClose) onClose();
         } else {
             setSnackbarMessage('Transfer failed due to validation errors');
             setSnackbarOpen(true);

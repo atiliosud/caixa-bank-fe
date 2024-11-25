@@ -40,7 +40,7 @@ const Navbar = ({ userName }) => {
                 <ListItem button component={Link} to="/brokers">
                     <ListItemText primary="Brokers" />
                 </ListItem>
-                <ListItem button component={Link} to="/cards"> {/* Nueva opción en el menú */}
+                <ListItem button component={Link} to="/cards">
                     <ListItemText primary="Cards" />
                 </ListItem>
             </List>
@@ -64,7 +64,6 @@ const Navbar = ({ userName }) => {
                         src={caixabankIcon}
                     />
                 </Box>
-                {/* Título de la aplicación con enlace al dashboard */}
                 <Typography variant="h6" component={Link} to="/" sx={{ textDecoration: 'none', color: 'inherit', flexGrow: 1, fontStyle: 'italic' }}>
                     CaixaBankNow
                 </Typography>
@@ -75,7 +74,7 @@ const Navbar = ({ userName }) => {
                     <Button color="inherit" component={Link} to="/transfers">Transfers</Button>
                     <Button color="inherit" component={Link} to="/deposits">Deposits</Button>
                     <Button color="inherit" component={Link} to="/brokers">Brokers</Button>
-                    <Button color="inherit" component={Link} to="/cards">Cards</Button> {/* Nueva opción en el menú */}
+                    <Button color="inherit" component={Link} to="/cards">Cards</Button>
                 </Box>
                 <Box 
                     sx={{ 

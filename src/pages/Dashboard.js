@@ -35,7 +35,7 @@ const Dashboard = ({ userName }) => {
     const [snackbarSeverity, setSnackbarSeverity] = useState('success');
     const [formErrors, setFormErrors] = useState({});
 
-    const { accounts, transfers, deposits, cards } = useStore(accountsStore); // Incluye tarjetas en el estado global
+    const { accounts, transfers, deposits, cards } = useStore(accountsStore);
 
     const lineData = {
         labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
@@ -200,7 +200,6 @@ const Dashboard = ({ userName }) => {
                             </IconButton>
                         </Card>
                     </Grid>
-                    {/* Nueva sección para tarjetas */}
                     <Grid item xs={12} sm={6} md={2}>
                         <Card sx={{ p: 2, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                             <Box sx={{ display: 'flex', alignItems: 'center' }}>
@@ -309,7 +308,6 @@ const Dashboard = ({ userName }) => {
                             </CardContent>
                         </Card>
                     </Grid>
-                    {/* Nueva sección para mostrar tarjetas */}
                     <Grid item xs={12}>
                         <Card sx={{ height: '100%' }}>
                             <CardContent>

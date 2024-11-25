@@ -27,7 +27,7 @@ export const accountsStore = map({
         { id: 1, description: 'Fixed Deposit', amount: '1000', interestRate: '5%', duration: '1 year', maturityDate: '2024-01-01' },
         { id: 2, description: 'Recurring Deposit', amount: '500', interestRate: '4%', duration: '2 years', maturityDate: '2025-01-01' },
     ],
-    cards: [ // Agregando tarjetas por defecto
+    cards: [
         {
             id: 1,
             cardholderName: 'John Doe',

@@ -5,7 +5,7 @@ import TimelineIcon from '@mui/icons-material/Timeline';
 
 import { useStore } from '@nanostores/react';
 import { accountsStore } from '../contexts/GlobalState';
-import caixabankIcon from '../assets/caixabank-icon-blue.png';  // Asegúrate de que esta ruta sea correcta
+import caixabankIcon from '../assets/caixabank-icon-blue.png';
 
 const Movements = () => {
     const { movements, accounts } = useStore(accountsStore);
@@ -14,7 +14,7 @@ const Movements = () => {
 
     const handleAccountSelect = (accountId) => {
         setSelectedAccountId(accountId === selectedAccountId ? null : accountId);
-        setShowMoreMovements(false); // Reset "Show More" state when changing accounts
+        setShowMoreMovements(false);
     };
 
     const filteredMovements = movements.filter(movement => movement.accountId === selectedAccountId);

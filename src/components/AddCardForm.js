@@ -15,7 +15,7 @@ const generateExpiryDate = () => {
 };
 
 const generateCVV = () => {
-    return String(Math.floor(Math.random() * 900) + 100); // Genera un número de 3 dígitos
+    return String(Math.floor(Math.random() * 900) + 100);
 };
 
 const AddCardForm = ({ open, setOpen }) => {
@@ -25,12 +25,10 @@ const AddCardForm = ({ open, setOpen }) => {
     const [cvv, setCvv] = useState('');
     const [formErrors, setFormErrors] = useState({});
 
-    // Usar `useStore` para acceder al estado global
     const { cards } = useStore(accountsStore);
 
     useEffect(() => {
         if (open) {
-            // Generar datos automáticamente cuando se abre el formulario
             setCardNumber(generateCardNumber());
             setExpiryDate(generateExpiryDate());
             setCvv(generateCVV());
@@ -38,7 +36,7 @@ const AddCardForm = ({ open, setOpen }) => {
     }, [open]);
 
     const addCard = (newCard) => {
-        accountsStore.setKey('cards', [...cards, newCard]); // Añadir nueva tarjeta al estado global
+        accountsStore.setKey('cards', [...cards, newCard]);
     };
 
     const validateForm = () => {
@@ -52,7 +50,6 @@ const AddCardForm = ({ open, setOpen }) => {
         if (Object.keys(errors).length === 0) {
             addCard({ id: Date.now(), cardholderName, cardNumber, expiryDate, cvv });
             setOpen(false);
-            // Reiniciar campos después de agregar la tarjeta
             setCardholderName('');
             setCardNumber('');
             setExpiryDate('');

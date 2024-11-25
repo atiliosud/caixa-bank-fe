@@ -9,7 +9,7 @@ const CardList = ({ cards, onDeleteCard }) => {
                 <ListItem key={card.id} data-testid="card-item">
                     <ListItemText
                         primary={`${card.cardholderName} - **** **** **** ${card.cardNumber.slice(-4)}`}
-                        secondary={`Vence: ${card.expiryDate}`}
+                        secondary={`Expire: ${card.expiryDate}`}
                     />
                     <IconButton
                         edge="end"

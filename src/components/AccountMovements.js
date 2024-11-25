@@ -5,7 +5,6 @@ import useAccountData from '../hooks/useAccountData';
 const AccountMovements = React.memo(({ accountId }) => {
     const { accountMovements, accountTransfers, loading, error } = useAccountData(accountId);
 
-    // Función para formatear la fecha en formato yyyy-MM-dd
     const formatDate = useCallback((date) => {
         const d = new Date(date);
         const year = d.getFullYear();
@@ -14,7 +13,6 @@ const AccountMovements = React.memo(({ accountId }) => {
         return `${year}-${month}-${day}`;
     }, []);
 
-    // Memoriza los elementos de la lista de movimientos
     const movementItems = useMemo(() => (
         accountMovements.map((movement) => (
             <ListItem key={movement.id}>
@@ -26,7 +24,6 @@ const AccountMovements = React.memo(({ accountId }) => {
         ))
     ), [accountMovements, formatDate]);
 
-    // Memoriza los elementos de la lista de transferencias
     const transferItems = useMemo(() => (
         accountTransfers.map((transfer) => (
             <ListItem key={transfer.id}>
